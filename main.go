@@ -1,18 +1,24 @@
 package main
 
-import "flag"
+import (
+	"io"
+	"os"
+)
+
+var output io.Writer = os.Stdout
 
 func main() {
-	if len(flag.Args()) < 1 {
+	if len(os.Args) == 1 {
 		printUsage()
+		return
 	}
 
-	switch flag.Arg(0) {
-	case "create":
-		//printVersion()
+	switch os.Args[1] {
 	case "help":
 		printUsage()
 	case "version":
 		printVersion()
+	default:
+		printUsage()
 	}
 }

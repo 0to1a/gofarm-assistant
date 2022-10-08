@@ -2,15 +2,13 @@ package main
 
 import (
 	"fmt"
-	"os"
 )
 
 const (
-	version = "v1.1"
-)
-
-func printUsage() {
-	help := `GoFarm Assistant CLI
+	version              = "v1.1"
+	versionNoProjectText = "GoFarm Assistant %s\n"
+	versionText          = "GoFarm Assistant %s\n  GoFarm project: %s\n"
+	helpText             = `GoFarm Assistant CLI
 
 Usage: 
   gofarm-assistant [command] [arg...] 
@@ -24,11 +22,13 @@ Commands:
   help		Help about any command
   version	Print current GoFarm Assistant version & Project version
 `
-	fmt.Print(help)
-	os.Exit(2)
+)
+
+func printUsage() {
+	fmt.Fprint(output, helpText)
 }
 
 func printVersion() {
-	fmt.Printf("GoFarm Assistant %s\n", version)
+	fmt.Fprintf(output, versionNoProjectText, version)
 	// TODO: check folder version
 }
