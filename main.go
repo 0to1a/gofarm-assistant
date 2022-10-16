@@ -14,6 +14,20 @@ func main() {
 	}
 
 	switch os.Args[1] {
+	case "new":
+		if len(os.Args) == 4 {
+			createProject(os.Args[2], os.Args[3])
+		} else if len(os.Args) == 3 {
+			createProject(os.Args[2], os.Args[2])
+		} else {
+			createProject("", "")
+		}
+	case "module":
+		if len(os.Args) == 3 {
+			createModule(os.Args[2])
+		} else {
+			createModule("")
+		}
 	case "help":
 		printUsage()
 	case "version":

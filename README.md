@@ -1,5 +1,5 @@
 ![Supported Go Versions](https://img.shields.io/badge/Go-1.16-lightgrey.svg)
-![Coverage](https://img.shields.io/badge/Coverage-100.0%25-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-23.6%25-red)
 
 # What is GoFarm Assistant
 **GoFarm Assistant CLI** is an all-in-one solution that provides create, develop, maintain, deploy project, and many other tools with [GoFarm Framework](https://github.com/0to1a/gofarm). 

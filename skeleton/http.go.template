@@ -1,0 +1,16 @@
+package TEMPLATE
+
+import (
+	"github.com/labstack/echo/v4"
+)
+
+func httpRoute(route *echo.Echo) {
+	root := route.Group("/TEMPLATE")
+	{
+		root.GET("/TEMPLATE", appTest)
+	}
+}
+
+func appTest(ctx echo.Context) error {
+	return framework.ResultAPI(ctx, 200, "OK", "")
+}
