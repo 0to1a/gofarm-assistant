@@ -27,8 +27,8 @@ func checkCriteriaNewModule(folderPath string) {
 		fmt.Fprint(output, errFolderExist)
 		os.Exit(3)
 	}
-	if checkVersion() {
-		fmt.Fprint(output, errFolderExist2)
+	if !checkVersion() {
+		fmt.Fprint(output, errFolderExist3)
 		os.Exit(3)
 	}
 }
@@ -93,14 +93,7 @@ func createModule(moduleName string) {
 		return
 	}
 	path := "app/" + moduleName + "Module"
-	if _, err := os.Stat(path); !os.IsNotExist(err) {
-		fmt.Fprint(output, errFolderExist)
-		return
-	}
-	if !checkVersion() {
-		fmt.Fprint(output, errFolderExist3)
-		return
-	}
+	checkCriteriaNewModule(path)
 
 	d, err := fsSkeleton.ReadDir("skeleton")
 	if err != nil {
