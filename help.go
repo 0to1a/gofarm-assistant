@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	version              = "v1.1"
+	version              = "v1.2"
 	versionNoProjectText = "GoFarm Assistant %s\n"
 	versionText          = "GoFarm Assistant %s\nGoFarm project: %s\n"
 	helpText             = `GoFarm Assistant CLI
