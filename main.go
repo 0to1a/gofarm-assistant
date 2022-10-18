@@ -22,12 +22,26 @@ func main() {
 		} else {
 			createProject("", "")
 		}
+	case "create":
+		if len(os.Args) == 4 {
+			createProject(os.Args[2], os.Args[3])
+		} else if len(os.Args) == 3 {
+			createProject(os.Args[2], os.Args[2])
+		} else {
+			createProject("", "")
+		}
 	case "module":
 		if len(os.Args) == 3 {
 			createModule(os.Args[2])
 		} else {
 			createModule("")
 		}
+	case "fix":
+		printVersion()
+	case "generate":
+		printVersion()
+	case "upgrade":
+		printVersion()
 	case "help":
 		printUsage()
 	case "version":

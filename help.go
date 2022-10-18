@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	version              = "v1.2"
+	version              = "v1.3"
 	versionNoProjectText = "GoFarm Assistant %s\n"
 	versionText          = "GoFarm Assistant %s\nGoFarm project: %s\n"
 	helpText             = `GoFarm Assistant CLI
@@ -19,6 +19,7 @@ Usage:
 
 Commands:
   new		Create new project
+  create	[Alias] Create new project
   module	Generate new module app on your project folder
   fix		Check & auto-repair before build application
   generate	Scan from database and generate struct
