@@ -12,5 +12,5 @@ func httpRoute(route *echo.Echo) {
 }
 
 func appTest(ctx echo.Context) error {
-	return framework.ResultAPI(ctx, 200, "OK", "")
+	return webserver.ResultAPI(ctx, 200, "OK", "")
 }
